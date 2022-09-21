@@ -1,0 +1,364 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+html {
+  height: -webkit-fill-available;
+}
+.container-fluid {
+  position: relative;
+  background-color: #eee;
+  border-radius: 40px;
+  width: 90vw;
+  height: 90vh;
+  border: 1px solid transparent;
+  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+}
+.gif {
+  display: block;
+  margin: 45px auto 0px;
+  width: 130px;
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 15px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.buttons button {
+  margin: 10px;
+  width: 150px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 15px;
+  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+  
+}
+
+.lab {
+  display: block;
+  width: 320px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px auto 20px;
+  border-radius: 15px;
+  font-size: 25px;
+  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+  font-weight: 500;
+}
+.input1 {
+  width: 320px;
+  height: 50px;
+  margin: 0px auto;
+  border-radius: 15px;
+  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+  text-align: center;
+  font-weight:500;
+  font-size: 20px;
+}
+.input1::placeholder{
+  color: blue;
+  opacity: .5;
+  text-align: center;
+}
+.input2 {
+  width: 150px;
+  height: 40px;
+
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+}
+.scoregroup {
+  width: 100px;
+  font-weight: bold;
+  height: inherit;
+}
+.scoregroup i {
+  color: #ffc107;
+  font-weight: bold;
+  font-family: "FontAwesome";
+}
+.input3 {
+  width: 150px;
+  height: 40px;
+  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+.count {
+  height: inherit;
+  width: 100px;
+  font-weight: bold;
+}
+.count i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4px;
+  color: #ffc107;
+  width: 40px;
+  font-weight: bold;
+  top: 50%;
+}
+
+.loader {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 40px;
+}
+
+.loader > img {
+  width: 200px;
+}
+
+.loader.hidden {
+  animation: fadeOut 2s;
+  animation-fill-mode: forwards;
+}
+.labval {
+  height: inherit;
+}
+.score {
+  height: inherit;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 1;
+    visibility: hidden;
+  }
+}
+
+.new{
+  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+}
+/* media */
+
+@media screen and (max-width: 610px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .input2 {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .input1 {
+    width: 200px;
+  }
+  .buttons button {
+    margin: 3px;
+    width: 80px;
+    font-size: 15px;
+  }
+  .lab {
+    width: 200px;
+    margin-top: 30px;
+  }
+}
+
+.new {
+  display: block;
+  margin: 20px auto 1px;
+}
+
+/* mediahight */
+
+@media screen and (max-height: 450px) {
+  .container-fluid {
+    padding: 0px;
+  }
+
+  .gif {
+    margin: 0px auto 0px;
+    height: 80px;
+  }
+  .lab {
+    margin: 10px auto 5px;
+    height: 35px;
+  }
+  .buttons button {
+    margin: 5px;
+    height: 30px;
+    padding: 0;
+  }
+  .input1 {
+    margin: 10px auto 5px;
+    height: 35px;
+  }
+  .content {
+    margin-top: 10px;
+  }
+  .input2 {
+    height: 30px;
+  }
+  .input3 {
+    height: 30px;
+  }
+}
+
+@media (min-height: 450px) and (max-height: 700px) {
+  .container-fluid {
+    padding-top: 0px;
+  }
+
+  .gif {
+    margin: 15px auto 0px;
+    height: 90px;
+  }
+  .lab {
+    margin: 15px auto 10px;
+    height: 35px;
+  }
+  .buttons button {
+    margin: 3px 10px;
+    height: 35px;
+    padding: 0;
+  }
+  .input1 {
+    margin: 15px auto 10px;
+    height: 35px;
+  }
+  .content {
+    margin-top: 15px;
+  }
+  .input2 {
+    height: 35px;
+  }
+  .input3 {
+    height: 35px;
+  }
+  .new {
+    margin: 10px auto 1px;
+  }
+}
+
+@media (min-height: 700px) and (max-height: 950px) {
+  .container-fluid {
+    padding-top: 0px;
+  }
+
+  .gif {
+    margin: 30px auto 10px;
+    height: 120px;
+  }
+  .lab {
+    margin: 30px auto 20px;
+    height: 45px;
+  }
+  .buttons button {
+    margin: 15px 10px;
+    height: 45px;
+    padding: 0;
+  }
+  .input1 {
+    margin: 30px auto 10px;
+    height: 45px;
+  }
+  .content {
+    margin-top: 30px;
+  }
+  .input2 {
+    height: 45px;
+  }
+  .input3 {
+    height: 45px;
+  }
+  .new {
+    margin: 20px auto 5px;
+  }
+}
+
+@media screen and (min-height: 950px) {
+  .container-fluid {
+    padding-top: 0px;
+  }
+
+  .gif {
+    margin: 50px auto 10px;
+    height: 130px;
+  }
+  .lab {
+    margin: 40px auto 20px;
+    height: 60px;
+  }
+  .buttons button {
+    margin: 30px 10px;
+    height: 60px;
+    padding: 0;
+  }
+  .input1 {
+    margin: 40px auto 10px;
+    height: 60px;
+  }
+  .content {
+    margin-top: 40px;
+  }
+  .input2 {
+    height: 60px;
+  }
+  .input3 {
+    height: 60px;
+  }
+  .new {
+    margin: 30px auto 5px;
+  }
+}
+
+.animate-charcter {
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s reverse infinite;
+  display: inline-block;
+  font-size: 25px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
